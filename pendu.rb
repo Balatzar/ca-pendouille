@@ -17,6 +17,11 @@ get '/mode_solo' do
 end
 
 post '/game' do
-	game(params)
+	game(params[:word])
 	erb :game
+end
+
+post '/ingame' do
+	ingame(params[:char])
+	erb :ingame
 end

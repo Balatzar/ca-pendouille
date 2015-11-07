@@ -1,1 +1,6 @@
 <p>Mot entré : <%= @word %></p>
+
+<form action="/ingame" method="post">
+	<input type="text" name="char" placeholder="met un charactère">
+	<button type="submit">ENVOIS LE CHARACTERE</button>
+</form>
