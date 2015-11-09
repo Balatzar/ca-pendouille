@@ -1,1 +1,5 @@
 <p>Mot entré : <%= @word %></p> <!-- affiche le mot entré et qui a été stocké par l'action submit de la page mode_duo.erb -->
+<form action="/ingame" method="post">
+	<input type="text" name="char" placeholder="met un charactère">
+	<button type="submit">ENVOIS LE CHARACTERE</button>
+</form>

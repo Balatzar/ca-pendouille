@@ -17,6 +17,12 @@ get '/mode_solo' do
 end
 
 post '/game' do #route permettant d'effectuer une action dans la page game
-	game(params) #l'action effectuée va appeler la fonction "game" sur un argument qu'on lui aura donné
+  game(params)
+	game(params[:word]) #l'action effectuée va appeler la fonction "game" sur un argument qu'on lui aura donné
 	erb :game #précision du template utilisé pour afficher le résultat dans la vue mentionnée
+end
+
+post '/ingame' do
+	ingame(params[:char])
+	erb :ingame
 end
